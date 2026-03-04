@@ -19,12 +19,9 @@ nav{
     justify-content:space-between;
     padding:15px 30px;
     background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
 }
-nav h2{ color:#ffffff; }
-
 nav button{
-    background:#ffffff;
+    background:white;
     color:black;
     border:none;
     padding:8px 15px;
@@ -39,7 +36,9 @@ nav button{
     padding:40px;
     text-align:center;
 }
-.active{ display:block; }
+.active{
+    display:block;
+}
 
 /* Forms */
 form{
@@ -57,9 +56,7 @@ input{
     border-radius:5px;
 }
 button{
-    background:white;
-    color:black;
-    padding:10px 15px;
+    padding:10px;
     border:none;
     border-radius:5px;
     cursor:pointer;
@@ -71,22 +68,15 @@ button{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
-.card{
-    background:rgba(255,255,255,0.07);
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 4px 20px rgba(255,255,255,0.05);
-}
 .card img{
     width:100%;
     height:160px;
-    border-radius:10px;
     object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
 }
 .price{
-    color:#ffffff;
     font-weight:bold;
-    font-size:18px;
 }
 </style>
 </head>
@@ -94,14 +84,14 @@ button{
 <body>
 
 <nav>
-    <h2>✈ Minimalist Travel</h2>
-    <div>
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('profile')">Profile</button>
-        <button onclick="showSection('login')">Login</button>
-        <button onclick="showSection('register')">Register</button>
-        <button onclick="logout()">Logout</button>
-    </div>
+<h2>✈ Minimalist Travel</h2>
+<div>
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('profile')">Profile</button>
+<button onclick="showSection('login')">Login</button>
+<button onclick="showSection('register')">Register</button>
+<button onclick="logout()">Logout</button>
+</div>
 </nav>
 
 <!-- HOME -->
@@ -109,212 +99,153 @@ button{
 <h1>Explore Top Destinations Across India</h1>
 
 <div class="packages">
+   
 
-    <!-- 🇮🇳 INDIAN DESTINATIONS -->
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1587922546307-776227941871">
-    <h3>Goa</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast & Dinner</p>
-    <p>Stay: Beach Resort</p>
-    <p class="price">₹15,999</p>
-    <button onclick="book('Goa',15999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
-    <h3>Manali</h3>
-    <p>Travel: Flight + Volvo</p>
-    <p>Food: All Meals</p>
-    <p>Stay: Mountain Hotel</p>
-    <p class="price">₹18,499</p>
-    <button onclick="book('Manali',18499)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41">
-    <h3>Jaipur</h3>
-    <p>Travel: Train</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: Heritage Hotel</p>
-    <p class="price">₹12,999</p>
-    <button onclick="book('Jaipur',12999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
-    <h3>Kerala</h3>
-    <p>Travel: Flight</p>
-    <p>Food: All Meals</p>
-    <p>Stay: Houseboat</p>
-    <p class="price">₹17,999</p>
-    <button onclick="book('Kerala',17999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86">
-    <h3>Ladakh</h3>
-    <p>Travel: Flight + Bike</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: Camp</p>
-    <p class="price">₹22,999</p>
-    <button onclick="book('Ladakh',22999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1589793907316-f94025b46850">
-    <h3>Rishikesh</h3>
-    <p>Travel: Train</p>
-    <p>Food: Veg Meals</p>
-    <p>Stay: Riverside Camp</p>
-    <p class="price">₹10,999</p>
-    <button onclick="book('Rishikesh',10999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642">
-    <h3>Mumbai</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: City Hotel</p>
-    <p class="price">₹13,999</p>
-    <button onclick="book('Mumbai',13999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a2">
-    <h3>Kashmir</h3>
-    <p>Travel: Flight</p>
-    <p>Food: All Meals</p>
-    <p>Stay: Houseboat</p>
-    <p class="price">₹24,999</p>
-    <button onclick="book('Kashmir',24999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1548013146-72479768bada">
-    <h3>Andaman</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: Beach Resort</p>
-    <p class="price">₹19,999</p>
-    <button onclick="book('Andaman',19999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995">
-    <h3>Agra</h3>
-    <p>Travel: Train</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: 3-Star Hotel</p>
-    <p class="price">₹9,999</p>
-    <button onclick="book('Agra',9999)">Book</button>
-    </div>
-    
-    <!-- 🌍 INTERNATIONAL DESTINATIONS -->
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a">
-    <h3>Dubai</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: 4-Star Hotel</p>
-    <p class="price">₹55,999</p>
-    <button onclick="book('Dubai',55999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
-    <h3>Paris</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Continental</p>
-    <p>Stay: Luxury Hotel</p>
-    <p class="price">₹1,25,999</p>
-    <button onclick="book('Paris',125999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2">
-    <h3>Maldives</h3>
-    <p>Travel: Flight</p>
-    <p>Food: All Meals</p>
-    <p>Stay: Water Villa</p>
-    <p class="price">₹89,999</p>
-    <button onclick="book('Maldives',89999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c">
-    <h3>Singapore</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: 4-Star Hotel</p>
-    <p class="price">₹65,999</p>
-    <button onclick="book('Singapore',65999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1526481280691-906b8c88e2e0">
-    <h3>Thailand</h3>
-    <p>Travel: Flight</p>
-    <p>Food: All Meals</p>
-    <p>Stay: Beach Resort</p>
-    <p class="price">₹45,999</p>
-    <button onclick="book('Thailand',45999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60f">
-    <h3>Switzerland</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Continental</p>
-    <p>Stay: Luxury Chalet</p>
-    <p class="price">₹1,80,999</p>
-    <button onclick="book('Switzerland',180999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-    <h3>Bali</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: Private Villa</p>
-    <p class="price">₹75,999</p>
-    <button onclick="book('Bali',75999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
-    <h3>New York</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: City Hotel</p>
-    <p class="price">₹2,10,999</p>
-    <button onclick="book('New York',210999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1518544887877-6d6d4a99b3f6">
-    <h3>Tokyo</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Japanese Cuisine</p>
-    <p>Stay: 4-Star Hotel</p>
-    <p class="price">₹1,50,999</p>
-    <button onclick="book('Tokyo',150999)">Book</button>
-    </div>
-    
-    <div class="card">
-    <img src="https://images.unsplash.com/photo-1506086679525-9c2c1c6d7b9d">
-    <h3>Australia</h3>
-    <p>Travel: Flight</p>
-    <p>Food: Breakfast</p>
-    <p>Stay: Resort</p>
-    <p class="price">₹1,95,999</p>
-    <button onclick="book('Australia',195999)">Book</button>
-    </div>
-    
-    </div>
+        <!-- Goa -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1587922546307-776227941871">
+        <h3>Goa</h3>
+        <p>Travel: Flight</p>
+        <p>Food: Breakfast & Dinner</p>
+        <p>Stay: Beach Resort</p>
+        <p class="price">₹15,999</p>
+        <button onclick="book('Goa',15999)">Book</button>
+        </div>
+        
+        <!-- Manali -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
+        <h3>Manali</h3>
+        <p>Travel: Flight + Volvo</p>
+        <p>Food: All Meals</p>
+        <p>Stay: Mountain Hotel</p>
+        <p class="price">₹18,499</p>
+        <button onclick="book('Manali',18499)">Book</button>
+        </div>
+        
+        <!-- Jaipur -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41">
+        <h3>Jaipur</h3>
+        <p>Travel: Train</p>
+        <p>Food: Breakfast</p>
+        <p>Stay: Heritage Hotel</p>
+        <p class="price">₹12,999</p>
+        <button onclick="book('Jaipur',12999)">Book</button>
+        </div>
+        
+        <!-- Kerala -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        <h3>Kerala</h3>
+        <p>Travel: Flight</p>
+        <p>Food: All Meals</p>
+        <p>Stay: Houseboat</p>
+        <p class="price">₹16,999</p>
+        <button onclick="book('Kerala',16999)">Book</button>
+        </div>
+        
+        <!-- Shimla -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+        <h3>Shimla</h3>
+        <p>Travel: Train</p>
+        <p>Food: Breakfast</p>
+        <p>Stay: Hill Resort</p>
+        <p class="price">₹14,999</p>
+        <button onclick="book('Shimla',14999)">Book</button>
+        </div>
+        
+        <!-- Andaman -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+        <h3>Andaman</h3>
+        <p>Travel: Flight</p>
+        <p>Food: Dinner</p>
+        <p>Stay: Beach Resort</p>
+        <p class="price">₹22,999</p>
+        <button onclick="book('Andaman',22999)">Book</button>
+        </div>
+        
+        <!-- Ladakh -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <h3>Ladakh</h3>
+        <p>Travel: Flight</p>
+        <p>Food: All Meals</p>
+        <p>Stay: Camp Stay</p>
+        <p class="price">₹24,999</p>
+        <button onclick="book('Ladakh',24999)">Book</button>
+        </div>
+        
+        <!-- Darjeeling -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+        <h3>Darjeeling</h3>
+        <p>Travel: Train</p>
+        <p>Food: Breakfast</p>
+        <p>Stay: Tea Resort</p>
+        <p class="price">₹13,999</p>
+        <button onclick="book('Darjeeling',13999)">Book</button>
+        </div>
+        
+        <!-- Rishikesh -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2">
+        <h3>Rishikesh</h3>
+        <p>Travel: Train</p>
+        <p>Food: Dinner</p>
+        <p>Stay: River Camp</p>
+        <p class="price">₹11,999</p>
+        <button onclick="book('Rishikesh',11999)">Book</button>
+        </div>
+        
+        <!-- Udaipur -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+        <h3>Udaipur</h3>
+        <p>Travel: Train</p>
+        <p>Food: Breakfast</p>
+        <p>Stay: Lake Palace</p>
+        <p class="price">₹17,499</p>
+        <button onclick="book('Udaipur',17499)">Book</button>
+        </div>
+        
+        <!-- Kashmir -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef">
+        <h3>Kashmir</h3>
+        <p>Travel: Flight</p>
+        <p>Food: All Meals</p>
+        <p>Stay: Houseboat</p>
+        <p class="price">₹21,999</p>
+        <button onclick="book('Kashmir',21999)">Book</button>
+        </div>
+        
+        <!-- Mysore -->
+        <div class="card">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+        <h3>Mysore</h3>
+        <p>Travel: Train</p>
+        <p>Food: Breakfast</p>
+        <p>Stay: 3-Star Hotel</p>
+        <p class="price">₹9,999</p>
+        <button onclick="book('Mysore',9999)">Book</button>
+        </div>
+        
+        </div>
+        </div>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="section">
+<h2>Login</h2>
+<form onsubmit="loginUser(event)">
+<input type="email" id="loginEmail" placeholder="Email" required>
+<input type="password" id="loginPassword" placeholder="Password" required>
+<button type="submit">Login</button>
+</form>
+</div>
 
 <!-- REGISTER -->
 <div id="register" class="section">
@@ -330,90 +261,135 @@ button{
 <!-- PROFILE -->
 <div id="profile" class="section">
 <h2>My Profile</h2>
-<div style="background:rgba(255,255,255,0.08);padding:20px;border-radius:10px;max-width:600px;margin:auto;">
 <p><strong>Name:</strong> <span id="profileName"></span></p>
 <p><strong>Email:</strong> <span id="profileEmail"></span></p>
-
 <h3>Booked Packages</h3>
-<ul id="bookingList" style="list-style:none;padding:0;"></ul>
-</div>
+<ul id="bookingList"></ul>
 </div>
 
 <script>
-function showSection(id){
-document.querySelectorAll('.section').forEach(sec=>sec.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-if(id==="profile"){ loadProfile(); }
-}
 
-function registerUser(e){
-e.preventDefault();
-localStorage.setItem("userName",regName.value);
-localStorage.setItem("userEmail",regEmail.value);
-localStorage.setItem("userPassword",regPassword.value);
-localStorage.setItem("bookings", JSON.stringify([]));
-alert("Registration Successful!");
-showSection('login');
-}
-
-function loginUser(e){
-e.preventDefault();
-if(loginEmail.value===localStorage.getItem("userEmail") &&
-loginPassword.value===localStorage.getItem("userPassword")){
-localStorage.setItem("loggedIn","true");
-alert("Login Successful!");
-showSection('home');
-}else{
-alert("Invalid Credentials!");
-}
-}
-
-function logout(){
-localStorage.removeItem("loggedIn");
-alert("Logged Out!");
-showSection('home');
-}
-
-function book(place,price){
-if(localStorage.getItem("loggedIn")==="true"){
-let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
-bookings.push(place + " - ₹" + price);
-localStorage.setItem("bookings", JSON.stringify(bookings));
-alert("Package: "+place+"\nTotal: ₹"+price+"\nBooking Confirmed!");
-}else{
-alert("Please Login First to Book!");
-showSection('login');
-}
-}
-
-function loadProfile(){
-if(localStorage.getItem("loggedIn")!=="true"){
-alert("Please Login First!");
-showSection('login');
-return;
-}
-profileName.innerText = localStorage.getItem("userName");
-profileEmail.innerText = localStorage.getItem("userEmail");
-
-let bookingList = document.getElementById("bookingList");
-bookingList.innerHTML = "";
-
-let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
-if(bookings.length===0){
-bookingList.innerHTML="<li>No bookings yet.</li>";
-}else{
-bookings.forEach(item=>{
-let li=document.createElement("li");
-li.style.padding="8px";
-li.style.margin="5px";
-li.style.background="rgba(255,255,255,0.05)";
-li.style.borderRadius="5px";
-li.innerText=item;
-bookingList.appendChild(li);
-});
-}
-}
-</script>
+    function updateNavbar(){
+        let loggedIn = localStorage.getItem("loggedIn")==="true";
+    
+        document.querySelector("button[onclick=\"showSection('login')\"]").style.display = loggedIn ? "none" : "inline-block";
+        document.querySelector("button[onclick=\"showSection('register')\"]").style.display = loggedIn ? "none" : "inline-block";
+        document.querySelector("button[onclick=\"logout()\"]").style.display = loggedIn ? "inline-block" : "none";
+    }
+    
+    function showSection(id){
+        document.querySelectorAll('.section').forEach(sec=>sec.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        if(id==="profile") loadProfile();
+    }
+    
+    function registerUser(e){
+        e.preventDefault();
+    
+        const name = document.getElementById("regName").value.trim();
+        const email = document.getElementById("regEmail").value.trim();
+        const password = document.getElementById("regPassword").value.trim();
+    
+        if(localStorage.getItem("userEmail")===email){
+            alert("User already registered!");
+            return;
+        }
+    
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
+        localStorage.setItem("bookings", JSON.stringify([]));
+    
+        alert("Registration Successful!");
+        showSection('login');
+    }
+    
+    function loginUser(e){
+        e.preventDefault();
+    
+        const email = document.getElementById("loginEmail").value.trim();
+        const pass = document.getElementById("loginPassword").value.trim();
+    
+        if(email === localStorage.getItem("userEmail") &&
+           pass === localStorage.getItem("userPassword")){
+    
+            localStorage.setItem("loggedIn","true");
+            alert("Login Successful!");
+            updateNavbar();
+            showSection('home');
+    
+        }else{
+            alert("Invalid Email or Password!");
+        }
+    }
+    
+    function logout(){
+        localStorage.removeItem("loggedIn");
+        alert("Logged Out Successfully!");
+        updateNavbar();
+        showSection('home');
+    }
+    
+    function book(place,price){
+        if(localStorage.getItem("loggedIn")==="true"){
+    
+            let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+            bookings.push({
+                place: place,
+                price: price,
+                date: new Date().toLocaleDateString()
+            });
+    
+            localStorage.setItem("bookings", JSON.stringify(bookings));
+            alert("Booking Confirmed for " + place);
+    
+        }else{
+            alert("Please Login First!");
+            showSection('login');
+        }
+    }
+    
+    function loadProfile(){
+        if(localStorage.getItem("loggedIn")!=="true"){
+            alert("Please Login First!");
+            showSection('login');
+            return;
+        }
+    
+        document.getElementById("profileName").innerText =
+            localStorage.getItem("userName");
+    
+        document.getElementById("profileEmail").innerText =
+            localStorage.getItem("userEmail");
+    
+        let list = document.getElementById("bookingList");
+        list.innerHTML="";
+    
+        let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    
+        if(bookings.length===0){
+            list.innerHTML="<li>No bookings yet</li>";
+        }else{
+            bookings.forEach((item,index)=>{
+                let li=document.createElement("li");
+                li.style.margin="10px";
+                li.style.padding="10px";
+                li.style.background="rgba(255,255,255,0.05)";
+                li.style.borderRadius="5px";
+                li.innerHTML = 
+                    item.place + " - ₹" + item.price +
+                    " <br><small>Date: "+item.date+"</small>";
+                list.appendChild(li);
+            });
+        }
+    }
+    
+    /* Auto check login on page load */
+    window.onload = function(){
+        updateNavbar();
+    }
+    
+    </script>
 
 </body>
 </html>
